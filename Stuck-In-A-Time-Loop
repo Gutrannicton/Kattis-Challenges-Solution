@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int numberAbra;
+        int counterAmount = 1;
+
+        Scanner scanner = new Scanner(System.in);
+        numberAbra = scanner.nextInt();
+
+        for (int p = numberAbra; p > 0; p--){
+            System.out.printf("%d Abracadabra %n", counterAmount);
+            counterAmount++;
+        }
+
+        scanner.close();
+
+    }
+}
