@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class LastFactorialDigit {
+
+    public static void main(String[] args) {
+
+        int numberOffTests;
+
+        Scanner scanner = new Scanner(System.in);
+        numberOffTests = scanner.nextInt();
+
+        while (numberOffTests > 0){
+
+            int firstNumber = scanner.nextInt();
+            int minusFirstNumber = firstNumber - 1;
+            int endNumber = 0;
+
+            if (minusFirstNumber <= 0){
+                minusFirstNumber++;
+
+                for (int i = minusFirstNumber; i > 0; i--){
+                    endNumber += firstNumber * minusFirstNumber;
+
+                }
+                System.out.println(endNumber);
+            }else {
+                endNumber++;
+                for (int i = minusFirstNumber; i > 0; i--){
+
+                    endNumber = firstNumber * minusFirstNumber;
+                    firstNumber = endNumber;
+                    minusFirstNumber--;
+                }
+
+                if (endNumber > 10){
+                    endNumber = endNumber % 10;
+                }
+                System.out.println(endNumber);
+            }
+
+            numberOffTests--;
+        }
+        scanner.close();
+
+    }
+}
