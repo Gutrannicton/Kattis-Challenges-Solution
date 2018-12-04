@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Filip {
+
+    public static void main(String[] args) {
+
+        int firstNumber;
+        int secondNumber;
+        int reversOne = 0;
+        int reversTwo = 0;
+
+        Scanner scanner = new Scanner(System.in);
+
+        firstNumber = scanner.nextInt();
+        secondNumber = scanner.nextInt();
+
+        while (firstNumber > 0){
+
+            reversOne = reversOne * 10;
+            reversOne = reversOne + firstNumber % 10;
+            firstNumber = firstNumber / 10;
+
+        }
+        while (secondNumber > 0){
+            reversTwo = reversTwo * 10;
+            reversTwo = reversTwo + secondNumber % 10;
+            secondNumber = secondNumber / 10;
+        }
+
+        if (reversOne > reversTwo){
+            System.out.println(reversOne);
+        }else {
+            System.out.println(reversTwo);
+        }
+
+
+
+        scanner.close();
+    }
+}
