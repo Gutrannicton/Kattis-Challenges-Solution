@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int rOneNumber;
+        int sMeanNumber;
+        Scanner scanner = new Scanner(System.in);
+        rOneNumber = scanner.nextInt();
+        sMeanNumber = scanner.nextInt();
+        int rTwoNumber = (sMeanNumber * 2) - rOneNumber;
+        System.out.println(rTwoNumber);
+
+
+        scanner.close();
+    }
+}
